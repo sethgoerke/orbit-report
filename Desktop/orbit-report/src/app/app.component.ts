@@ -7,6 +7,7 @@ import { Satellite } from './satellite';
 })
 export class AppComponent {
   title = 'orbit-report';
+ 
   sourceList: Satellite[];
   
   constructor() {
@@ -17,5 +18,5 @@ export class AppComponent {
       new Satellite("GPS 938", "Positioning", "2001-11-01", "HIGH", true),
       new Satellite("ISS", "Space Station", "1998-11-20", "LOW", true),
     ];
-  }
+  };
 };
