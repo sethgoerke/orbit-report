@@ -9,11 +9,15 @@ import { Satellite } from '../satellite'; //copied from orbit-list.component.ts/
 })
 export class OrbitCountsComponent implements OnInit {
   @Input() satellites: Satellite[]; //copied from orbit-list.component.ts//
-  
+  // count = (Satellite.match(/Space Debris) || []).length;
   
   constructor() { }
 
   ngOnInit() {
   }
-
+countOccurrence(arr, val){
+return arr.reduce((acc,elem) =>{
+  return(val===elem ? acc + 1 : acc)
+}, 0)
+}
 }
