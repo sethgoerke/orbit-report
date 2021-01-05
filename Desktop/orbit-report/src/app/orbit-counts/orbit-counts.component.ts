@@ -15,21 +15,23 @@ export class OrbitCountsComponent implements OnInit {
 
   ngOnInit() {
   }
-// countOccurrence(arr, val){
-// return arr.reduce((acc,elem) =>{
-//   return(val===elem ? acc + 1 : acc)
-// }, 0)
-// }
+  matchWord(item:string):number {
+    let acc = 0
+    if(this.satellites.length > 0){
+      for (let i = 0; i < this.satellites.length; i++){
+        if(this.satellites[i].type === item){
+          console.log(this.satellites[i].type)
+          acc++
+          };
+        };
+      };
+    return acc
+    };
 
-// matchWord(item:string):number {
-//   let arr = this.satellites
-//   return arr.match(/Probe/g).length;
-// }
-// matchWord(item:string):number {
-//   let arr = []
-//   if(this.type.toLowerCase() == item){
-// item.push(arr)
-// }
-// return arr.length
-// }
+   
+    
+  
+    
+    
+  
 }
